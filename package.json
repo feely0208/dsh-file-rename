@@ -1,0 +1,67 @@
+{
+  "name": "@deepwhale-cn/dsh-file-rename",
+  "version": "0.1.0",
+  "description": "深鲸批量改名：按替换/前缀/后缀/编号规则批量重命名文件，先预览再执行，不覆盖",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugin",
+    "skill",
+    "rename",
+    "batch",
+    "files",
+    "重命名"
+  ],
+  "files": [
+    "lib",
+    "bin",
+    "skill",
+    "cordis.patch.yml",
+    "tests/fixtures",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-file-rename": "./bin/cli.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.1.0-rc.6 <0.3.0",
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "dependencies": {
+    "@deepwhale-cn/dsh-guard-core": "^0.10.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": "*"
+  },
+  "author": "温州深鲸智能科技有限公司 <contact@deepwhale.org.cn>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feely0208/dsh-file-rename.git"
+  },
+  "homepage": "https://www.deepwhale.org.cn/skills.html",
+  "bugs": {
+    "url": "https://github.com/feely0208/dsh-file-rename/issues"
+  }
+}

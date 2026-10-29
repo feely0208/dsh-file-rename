@@ -1,0 +1,4 @@
+# @deepwhale-cn/dsh-file-rename 的组合层
+- insert:
+    - id: file-rename
+      name: '@deepwhale-cn/dsh-file-rename'
