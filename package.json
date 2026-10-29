@@ -1,6 +1,6 @@
 {
   "name": "@deepwhale-cn/dsh-file-rename",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "深鲸批量改名：按替换/前缀/后缀/编号规则批量重命名文件，先预览再执行，不覆盖",
   "type": "module",
   "license": "MIT",
